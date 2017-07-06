@@ -1,0 +1,6 @@
+# Ignore build
+node_modules/*
+bower_components/*
+app/dist/*
+projects/*
+.DS_Store
