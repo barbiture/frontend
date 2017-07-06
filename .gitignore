@@ -1,6 +1,7 @@
 # Ignore build
 node_modules/*
 bower_components/*
-app/dist/*
-projects/*
+app/*
+# app/dist/*
+projects/dist/*
 .DS_Store
