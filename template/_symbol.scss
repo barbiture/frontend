@@ -1,0 +1,12 @@
+{{#shapes}}{{#selector.dimensions}}{{expression}}{{^last}},
+{{/last}}{{/selector.dimensions}} {
+  width: {{width.outer}}px;
+  height: {{height.outer}}px;
+}
+{{/shapes}}
+.icon {
+  width: 1em;
+  display: inline-block;
+  font-size: 1em;
+  fill: currentColor;
+}

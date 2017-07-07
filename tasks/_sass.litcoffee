@@ -8,7 +8,23 @@ within this single Gulp task.
 
     module.exports = (gulp, run, paths) ->
       () ->
-        gulp.src paths.sass.src_files
+
+#WATCH
+
+        gulp.watch([
+              paths.sass.src_files,
+              paths.sass.src_files_components
+            ],
+            ['_sass']
+            )
+            .on('change', run.browserSync.reload)
+        gulp.src [
+          paths.sass.src_files
+          'bower_components/slick-carousel/slick/slick.scss'
+        ]
+
+#SOURCEMAPS
+
         .pipe run.sourcemaps.init()
         .pipe run.plumber(errorHandler: (err) ->
             run.notify.onError('Error: <%= error.message %>') err

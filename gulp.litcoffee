@@ -11,12 +11,15 @@ $APP
 
     app = './projects/blagoyArt/src/'
 
-    prod = '../barbiture.github.io/'
+    prod = '../barbiture.github.io/blagoyArt/'
     dev = './projects/blagoyArt/dist/'
-    base = dev
+    base = prod
     paths =
+        'app_root':
+            'app_src': app
         'html':
             'src_files': app+'*.html'
+            'src_files_components': app+'components/**/*.html'
             'dist_dir': base+''
         'img':
             'src_files': app+'assets/img/*.*'
@@ -32,6 +35,7 @@ $APP
             'dist_dir': base+'styles/'
         'sass':
             'src_files': app+'assets/styles/**/*.scss'
+            'src_files_components': app+'components/**/*.scss'
             'dist_dir': base+'styles/'
         'css':
             'src_files': app+'assets/styles/*.css'
@@ -44,7 +48,9 @@ $APP
             'dist_dir': base+'js/'
         'svgicons':
             'src_colorless_files': app+'assets/icons/colorless/*.svg'
-            'src_colored_files': app+'assets/icons/colored/*.svg'
+            'dist_colorless_files': app+'assets/icons/colorless/dest/'
+            'src_colored_files': app+'assets/icons/colored/src/*.svg'
+            'dist_colored_files': app+'assets/icons/colored/dest/'
             'dist_dir': base+'icons/'
         'raster':
             'src_files': app+'assets/icons/**/*.svg'

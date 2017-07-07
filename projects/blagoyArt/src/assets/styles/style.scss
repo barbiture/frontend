@@ -1,11 +1,19 @@
 @import "base/_reset";
 @import "base/_fonts";
+
+@import "../icons/colored/dest/symbol/_symbol";
+@import "../icons/colorless/dest/symbol/_symbol";
+@import "../../components/nav/_nav";
 //@import "components/_jquery.formstyler";
 //@import "components/_fancybox";
 //@import "components/_slick";
 //@import "components/_mCustomScrollbar";
-@import "layout/_header";
+
+// @import "layout/_header";
+@import "../../components/header/_header";
+// @import "/components/menu__level/menu__level";
+@import "../../components/btn/_btn";
+
 @import "layout/_footer";
 @import "layout/_content";
 @import "layout/_media";
-

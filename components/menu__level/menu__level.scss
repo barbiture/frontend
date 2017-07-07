@@ -1,0 +1,119 @@
+.title {
+  cursor: pointer;
+}
+.menu {
+  &__level { /*Change menu content size*/
+    margin-top: 20px;
+    float: left;
+    width: 0;
+    &_active{
+      width: 300px;
+    }
+    &_animate {
+      -webkit-transition: left .2s ease-in-out;
+      -o-transition: left .2s ease-in-out;
+      transition: left .2s ease-in-out;
+    }
+  }
+  &__toggle {  /*Change toggle size by adjusting width & height*/
+    cursor: pointer;
+    height: 20px;
+    position: relative;
+    width: 20px;
+    i {  /*Change toggles color here*/
+      cursor: pointer;
+      background-color: green;
+      height: 20%;
+      left: 0;
+      position: absolute;
+      top: 0;
+      width: 100%;
+      &:nth-child(2) {
+        top: 40%;
+      }
+      &:nth-child(3) {
+        top: 80%;
+      }
+    }
+  }
+  &__wrapper {
+    overflow: hidden;
+    position: relative;
+  }
+  &__content {  /*Default content is hidden*/
+    padding: 15px;
+    position: absolute;
+    height: 100%;
+    width: 0;
+    left: -100%;
+    top: 0;
+    &_active {  /*Position showing content*/
+      left: 0;
+      width: 100%;
+      position: relative;
+    }
+    &__sub {
+      position: relative;
+      overflow: hidden;
+      width: 100%;
+      &_hide {
+        display: none;
+      }
+    }
+  }
+  &__sub {
+    padding: 0;
+    position: absolute;
+    height: 100%;
+    width: 0;
+    left: -100%;
+    top: 0;
+    cursor: pointer;
+    &__level {
+      background-color: #fff;
+      &_active {
+        left: 0;
+        width: 100%;
+        position: relative;
+      }
+    }
+    &__toggle {
+      position: relative;
+      cursor: pointer;
+      overflow: hidden;
+      &_hide {
+        position: absolute;
+        left: -100%;
+      }
+      &_active {
+        left: 0;
+        position: relative;
+        background-color: #888;
+
+        > .menu__sub__back {
+          left: 0;
+          position: relative;
+          width: 100%;
+        }
+      }
+    }
+    &__back {
+      position: absolute;
+      left: -100%;
+      top: 0;
+    }
+    &_active {
+
+    }
+  }
+  &__shift {
+    float: left;
+    width: 100%;
+    &_active {
+      position: absolute;
+      left: 300px;
+    }
+  }
+}
+
+

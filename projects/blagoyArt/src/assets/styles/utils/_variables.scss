@@ -1,21 +1,29 @@
 /* reset */
-$min-width: 320px; 
-$max-width: 1200px; 
-$base-bg: #FFF; 
-$base-font-size: 13px; 
-$base-line-height: 18px; 
-$base-font-family: Arial, sans-serif; 
-$custom-font-family: 'Open Sans', sans-serif; 
-$link-color: #100da9;
-$default-transition:all 0.2s linear;
+$min-width: 320px;
+$max-width: 1200px;
+
+$base-font-size: 13px;
+$base-line-height: 18px;
+$base-font-family: Arial, sans-serif;
+$custom-font-family: 'PT Sans', sans-serif;
+
+$default-transition: all 0.2s linear;
 
 /* main variables */
 
-//text, titles
-$text-color: #000;
-$title-color: #000;
-$title-font-family: $custom-font-family;
+// COLOR
+$bodrer-input-color: #b9b8bd;
+$border-color: #dddfdf;
+$brand-color: #cb944c;
+$second-color: #747688;
+$base-bg: #FFF;
+$text-color: #171717;
+$grey-color: #666666;
+$title-color: #171717;
+$link-color: #252a54;
 
+// TYPOGRAPHY
+$title-font-family: $custom-font-family;
 $font-size-h1: 36px;
 $line-height-h1: 42px;
 $font-size-h2: 32px;

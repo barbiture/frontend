@@ -62,13 +62,13 @@ default, or as build. It almost can't get any simpler:
       '_watch'
     ]
     gulp.task 'proj', [
+      'serve',
       '_sass',
       '_html',
       '_fonts',
       '_img',
       '_spritesvg',
-      '_spritesvgc',
-      'connect'
+      '_spritesvgc'
     ]
     gulp.task 'default', [
                           '_less',

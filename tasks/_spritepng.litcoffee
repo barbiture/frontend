@@ -12,7 +12,7 @@ JavaScript files is handled within this single Gulp task.
           cssName: '_sprite.less'
           cssFormat: 'less'
           algorithm: 'binary-tree'
-          cssTemplate: 'template/spritesmith.less'
+          cssTemplate: 'template/_spritesmith.less'
           imgPath: '../icons/sprite.png'
           cssVarMap: (sprite) ->
             sprite.name = 's-' + sprite.name

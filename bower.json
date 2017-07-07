@@ -16,5 +16,8 @@
   ],
   "devDependencies": {
     "svg4everybody": "^2.1.8"
+  },
+  "dependencies": {
+    "slick-carousel": "^1.6.0"
   }
 }
