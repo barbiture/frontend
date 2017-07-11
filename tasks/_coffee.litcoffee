@@ -4,6 +4,7 @@ COFFEE
 Everything related to compiling CoffeeScript files, minifying
 JavaScript files is handled within this single Gulp task.
 
+
     module.exports = (gulp, run, paths) ->
       () ->
         gulp.src(paths.coffee.src_files)

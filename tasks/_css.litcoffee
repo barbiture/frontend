@@ -14,6 +14,9 @@ within this single Gulp task.
         .pipe run.browserSync.stream()
         .pipe run.connect.reload()
 
+        gulp.watch(
+            paths.css.src_files,['_css'])
+            .on('change', run.browserSync.reload)
 
 
 

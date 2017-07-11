@@ -1,5 +1,9 @@
-    
-    
+
+BROWSERSYNC
+-> IF DON'T LIKE CONNECT, USE THIS STAFF
+----------------------------------------------------------------
+
+
     browserSync = require('browser-sync').create()
     module.exports = (gulp, run, paths, base) ->
       browserSync.init

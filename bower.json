@@ -15,7 +15,8 @@
     "tests"
   ],
   "devDependencies": {
-    "svg4everybody": "^2.1.8"
+    "svg4everybody": "^2.1.8",
+    "fullpage.js": "^2.9.4"
   },
   "dependencies": {
     "slick-carousel": "^1.6.0"

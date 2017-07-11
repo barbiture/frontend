@@ -1,26 +1,28 @@
 
-# Modularized Task Loader
+MODULARIZED TASK LOADER
 ----------------------------------------------------------------
 This handles modularizing all of our Gulp tasks in a very easy
 and understandable manner. To ease plugin loading, we require 
 'gulp-load-plugins' so dependencies from `package.json` get
 autoloaded. It's just called `run` for expressiveness.
 
+    gulp = require 'gulp'
+    run  = require('gulp-load-plugins')(pattern: '*')
+    appName = 'htmlTest'
+    app = './app/'+appName+'/src/'
 
-$APP
 
-    app = './projects/blagoyArt/src/'
 
-    prod = '../barbiture.github.io/blagoyArt/'
-    dev = './projects/blagoyArt/dist/'
-    base = prod
+    prod = '../barbiture.github.io/'+appName+'/' #app prod and sourse
+    dev = './app/'+appName+'/dist/'
+    base = dev
     paths =
         'app_root':
             'app_src': app
         'html':
             'src_files': app+'*.html'
-            'src_files_components': app+'components/**/*.html'
-            'dist_dir': base+''
+            'watch_files': app+'components/**/*.html'
+            'dist_dir': base
         'img':
             'src_files': app+'assets/img/*.*'
             'dist_dir': base+'img/'
@@ -35,7 +37,6 @@ $APP
             'dist_dir': base+'styles/'
         'sass':
             'src_files': app+'assets/styles/**/*.scss'
-            'src_files_components': app+'components/**/*.scss'
             'dist_dir': base+'styles/'
         'css':
             'src_files': app+'assets/styles/*.css'
@@ -48,9 +49,11 @@ $APP
             'dist_dir': base+'js/'
         'svgicons':
             'src_colorless_files': app+'assets/icons/colorless/*.svg'
-            'dist_colorless_files': app+'assets/icons/colorless/dest/'
+            'dist_colorless': app+'assets/icons/colorless/dest/'
+
             'src_colored_files': app+'assets/icons/colored/src/*.svg'
-            'dist_colored_files': app+'assets/icons/colored/dest/'
+            'dist_colored': app+'assets/icons/colored/dest/'
+
             'dist_dir': base+'icons/'
         'raster':
             'src_files': app+'assets/icons/**/*.svg'
@@ -62,9 +65,6 @@ $APP
         'images':
             'src_files': app+'assets/img/*.*'
             'dist_dir': app+'images/'
-
-    gulp = require 'gulp'
-    run  = require('gulp-load-plugins')(pattern: '*')
 
     module.exports = (tasks) ->
       addElem: (paths) ->

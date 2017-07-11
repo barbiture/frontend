@@ -27,7 +27,6 @@ within this single Gulp task.
         .pipe run.sourcemaps.write('./maps')
         .pipe gulp.dest paths.less.dist_dir
         .pipe run.notify('Finished: <%= file.relative %>')
-        .pipe run.browserSync.stream()
         .pipe run.connect.reload()
 
 
