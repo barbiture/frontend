@@ -1,8 +1,10 @@
 
-    module.exports = (gulp, run, paths) ->
 
+
+    module.exports = (gulp, run, paths) ->
       () ->
-        gulp.watch([paths.html.src_files, paths.html.watch_files],['_html'])
+        gulp.watch([paths.html.src_files, paths.html.watch_files], ['_html'])
+        # done()
     # #LESS
     #     gulp.watch(
     #         paths.less.src_files,

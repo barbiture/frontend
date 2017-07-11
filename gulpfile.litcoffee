@@ -11,11 +11,10 @@ npm i gulp coffee-script gulp-coffee gulp-load-plugins gulp-connect browser-sync
 $Path
 
 
-
     tasks = [
-      '_connect'
-      '_html'
       '_watch'
+      '_html'
+      '_server'
     ]
 
 After that, we simply require Gulp from an extra 'gulp.coffee'
@@ -34,9 +33,9 @@ we can now easily pass whatever tasks we want Gulp to run as
 default, or as build. It almost can't get any simpler:
 
 
-    gulp.task 'test', [
+    gulp.task 'serve', [
       '_watch'
-      '_connect'
+      '_server'
     ]
     gulp.task 'proj', [
       'connect',
