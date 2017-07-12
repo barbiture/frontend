@@ -14,6 +14,7 @@ $Path
     tasks = [
       '_watch'
       '_html'
+      '_less'
       '_server'
     ]
 
@@ -32,11 +33,11 @@ Since we've modularized everything before in the above section,
 we can now easily pass whatever tasks we want Gulp to run as
 default, or as build. It almost can't get any simpler:
 
-
     gulp.task 'serve', [
       '_watch'
       '_server'
     ]
+
     gulp.task 'proj', [
       'connect',
       '_js',
@@ -47,7 +48,12 @@ default, or as build. It almost can't get any simpler:
       '_spritesvg',
       '_spritesvgc'
     ]
-    gulp.task 'build', ['_html']
-    gulp.task 'default', ['build', '_browser']
+    gulp.task 'build', [
+      '_html'
+      '_less'
+      '_watch'
+      '_server'
+    ]
+    gulp.task 'default', ['build', '_watch', '_server']
 
     

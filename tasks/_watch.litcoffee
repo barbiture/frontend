@@ -4,6 +4,8 @@
     module.exports = (gulp, run, paths) ->
       () ->
         gulp.watch([paths.html.src_files, paths.html.watch_files], ['_html'])
+        gulp.watch('components/bower/**/less/*.less', ['bowerLess'])
+        gulp.watch([paths.less.src_files, paths.less.watch_files], ['_less'])
         # done()
     # #LESS
     #     gulp.watch(

@@ -23,6 +23,10 @@ autoloaded. It's just called `run` for expressiveness.
             'src_files': app+'*.html'
             'watch_files': app+'components/**/*.html'
             'dist_dir': base
+        'less':
+            'src_files': app+'assets/styles/**/*.less'
+            'watch_files': app+'components/**/*.less'
+            'dist_dir': base+'styles/'
         'img':
             'src_files': app+'assets/img/*.*'
             'dist_dir': base+'img/'
@@ -32,9 +36,6 @@ autoloaded. It's just called `run` for expressiveness.
         'jade':
             'src_files': app+'views/*.jade'
             'dist_dir': base+''
-        'less':
-            'src_files': app+'assets/styles/**/*.less'
-            'dist_dir': base+'styles/'
         'sass':
             'src_files': app+'assets/styles/**/*.scss'
             'dist_dir': base+'styles/'

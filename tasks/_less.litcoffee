@@ -8,7 +8,9 @@ within this single Gulp task.
 
     module.exports = (gulp, run, paths, base) ->
       () ->
-        gulp.src paths.less.src_files
+        gulp.src [
+          paths.less.src_files
+        ]
         .pipe run.sourcemaps.init()
         .pipe run.plumber(errorHandler: (err) ->
             run.notify.onError('Error: <%= error.message %>') err

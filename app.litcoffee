@@ -8,7 +8,7 @@
 
 
 
-    appSource = 'app/appTemplate/'
+    appSource = 'template/util/appTemplate/'
     appDest = ''
 
     properties = [

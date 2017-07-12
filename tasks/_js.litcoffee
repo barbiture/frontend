@@ -16,10 +16,7 @@ JavaScript files is handled within this single Gulp task.
             .on('change', run.browserSync.reload)
         gulp.src [
           paths.js.src_files
-          'bower_components/svg4everybody/dist/svg4everybody.js'
-          'bower_components/slick-carousel/slick/slick.min.js'
-          paths.app_root.app_src+'components/slider/_slider.js'
-          paths.app_root.app_src+'components/nav/_nav.js'
+          'bower_components/bootstrap/js/dropdown.js'
         ]
         .pipe run.sourcemaps.init()
         # .pipe run.concat 'app.js'
@@ -29,5 +26,4 @@ JavaScript files is handled within this single Gulp task.
         .pipe run.duration('building js')
         .pipe run.notify(message: 'js task complete')
         .pipe run.livereload()
-        .pipe run.browserSync.stream()
         .pipe run.connect.reload()
