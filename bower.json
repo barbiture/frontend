@@ -21,5 +21,12 @@
     "svg4everybody": "^2.1.8",
     "fullpage.js": "^2.9.4",
     "bootstrap": "^3.3.7"
+  },
+  "overrides": {
+    "bootstrap": {
+      "main": [
+        "less/!(variables).less", "dist/fonts/*", "dist/js/*"
+      ]
+    }
   }
 }

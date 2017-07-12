@@ -16,6 +16,9 @@ $Path
       '_html'
       '_less'
       '_server'
+      '_bower'
+      '_bowerPrepareLess'
+      '_bowerCompileLess'
     ]
 
 After that, we simply require Gulp from an extra 'gulp.coffee'
@@ -32,7 +35,19 @@ array and let Node's export feature handle the rest:
 Since we've modularized everything before in the above section,
 we can now easily pass whatever tasks we want Gulp to run as
 default, or as build. It almost can't get any simpler:
-
+    
+    gulp.task 'bower' , [
+      '_bower'
+    ]
+    gulp.task 'bowerPrepare', [
+      'bower'
+      '_bowerPrepareLess'
+      
+    ]
+    gulp.task 'bowerLess', [
+      'bowerPrepare'
+      '_bowerCompileLess'
+    ]
     gulp.task 'serve', [
       '_watch'
       '_server'
