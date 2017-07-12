@@ -23,54 +23,54 @@ test projects in ./app/:
     base = dev
     paths =
         'app_root':
-            'app_src': app
-        'html':
-            'src_files': app+'*.html'
-            'watch_files': app+'components/**/*.html'
-            'dist_dir': base
-        'less':
-            'src_files': app+'assets/styles/**/*.less'
-            'watch_files': app+'components/**/*.less'
-            'dist_dir': base+'styles/'
-        'img':
-            'src_files': app+'assets/img/*.*'
-            'dist_dir': base+'img/'
-        'fonts':
-            'src_files': app+'assets/fonts/*.*'
-            'dist_dir': base+'fonts/'
-        'jade':
-            'src_files': app+'views/*.jade'
-            'dist_dir': base+''
-        'sass':
-            'src_files': app+'assets/styles/**/*.scss'
-            'dist_dir': base+'styles/'
-        'css':
-            'src_files': app+'assets/styles/*.css'
-            'dist_dir': base+'styles/'
-        'js':
-            'src_files': app+'assets/js/*.js'
-            'dist_dir': base+'js/'
-        'coffee':
-            'src_files': app+'assets/js/*.litcoffee'
-            'dist_dir': base+'js/'
-        'svgicons':
-            'src_colorless_files': app+'assets/icons/colorless/*.svg'
-            'dist_colorless': app+'assets/icons/colorless/dest/'
+            'app_src':              app
+        'html': # compile and minfy html
+            'src_files':            app+'*.html'
+            'watch_files':          app+'components/**/*.html'
+            'dist_dir':             base
+        'less': # compile and minfy less
+            'src_files':            app+'assets/styles/**/*.less'
+            'watch_files':          app+'components/**/*.less'
+            'dist_dir':             base+'styles/'
+        'js': # compile and minfy js
+            'src_files':            app+'assets/js/*.js'
+            'watch_files':          app+'components/**/*.js'
+            'dist_dir':             base+'js/'
+        'img': # compile and minfy img
+            'src_files':            app+'assets/img/*.*'
+            'dist_dir':             base+'img/'
+        'fonts':  # compile and minfy fonts
+            'src_files':            app+'assets/fonts/*.*'
+            'dist_dir':             base+'fonts/'
+        'jade':  # compile and minfy jade
+            'src_files':            app+'views/*.jade'
+            'dist_dir':             base+''
+        'sass': # compile and minfy sass
+            'src_files':            app+'assets/styles/**/*.scss'
+            'dist_dir':             base+'styles/'
+        'css': # compile and minfy css
+            'src_files':            app+'assets/styles/*.css'
+            'dist_dir':             base+'styles/'
+        'coffee': # compile and minfy coffee
+            'src_files':            app+'assets/js/*.litcoffee'
+            'dist_dir':             base+'js/'
+        'svgicons': # colores svg icons to sprte
+                    # todo: testing colored files (use svgForEverybody.js)
+            'src_colorless_files':  app+'assets/sprites/colorless/src/*.svg'
+            'dist_colorless':       app+'assets/sprites/colorless/dist/'
 
-            'src_colored_files': app+'assets/icons/colored/src/*.svg'
-            'dist_colored': app+'assets/icons/colored/dest/'
+            'src_colored_files':    app+'assets/sprites/colored/src/*.svg'
+            'dist_colored':         app+'assets/sprites/colored/dist/'
 
-            'dist_dir': base+'icons/'
-        'raster':
-            'src_files': app+'assets/icons/**/*.svg'
-            'dist_dir': app+'assets/icons/png'
-        'pngicons':
-            'src_files': app+'assets/icons/png/*.png'
-            'dist_styles':  app+'assets/styles/variables/'
-            'dist_dir': base+'icons/'
-        'images':
-            'src_files': app+'assets/img/*.*'
-            'dist_dir': app+'images/'
+            'dist_dir':             base+'sprites/'
+
+        'raster': ## svg to png
+            'src_files':            app+'assets/sprites/colorless/src/*.svg'
+            'dist_dir':             app+'assets/sprites/png/dist'
+        'pngicons': ## png sprite
+            'src_files':            app+'assets/sprites/png/dist/*.png'
+            'dist_styles':          app+'assets/sprites/png/src/'
+            'dist_dir':             base+'sprites/'
 
     run.util.log '##### GULP BUILD #####'
     yellow  = run.util.colors.yellow app

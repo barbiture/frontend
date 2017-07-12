@@ -6,6 +6,7 @@
         gulp.watch([paths.html.src_files, paths.html.watch_files], ['_html'])
         gulp.watch('components/bower/**/less/*.less', ['bowerLess'])
         gulp.watch([paths.less.src_files, paths.less.watch_files], ['_less'])
+        gulp.watch([paths.js.src_files, paths.js.watch_files], ['_js'])
         # done()
     # #LESS
     #     gulp.watch(

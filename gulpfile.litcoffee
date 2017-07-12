@@ -14,8 +14,12 @@ $Path
     tasks = [
       '_html'
       '_less'
+      '_js'
       '_watch'
       '_server'
+      '_raster'
+      '_spritepng'
+      '_svgColorless'
     ]
 
 After that, we simply require Gulp from an extra 'gulp.coffee'
@@ -32,7 +36,14 @@ array and let Node's export feature handle the rest:
 Since we've modularized everything before in the above section,
 we can now easily pass whatever tasks we want Gulp to run as
 default, or as build. It almost can't get any simpler:
-
+    
+    gulp.task 'sprite', [
+      '_raster'
+      '_spritepng'
+    ]
+    gulp.task 'test', [
+      '_svgColorless'
+    ]
     gulp.task 'serve', [
       '_watch'
       '_server'
@@ -41,6 +52,9 @@ default, or as build. It almost can't get any simpler:
     gulp.task 'build', [
       '_html'
       '_less'
+      '_js'
+      '_svgColorless'
+      'sprite'
       '_watch'
       '_server'
     ]

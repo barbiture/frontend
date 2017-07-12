@@ -1,11 +1,11 @@
 
-Scripts
+SVG SPRITE
 ----------------------------------------------------------------
-Everything related to compiling CoffeeScript files, minifying
-JavaScript files is handled within this single Gulp task.
+Everything related to compiling colored svg files, minifying
+svg files is handled within this single Gulp task.
 
     module.exports = (gulp, run, paths) ->
-        confColorless =
+        confColored =
           dest: './'
           log: 'info'
           dimension:
@@ -16,38 +16,27 @@ JavaScript files is handled within this single Gulp task.
             padding: 1
           mode: symbol:
             inline: true
-            dest: 'dist/colorless'
-            sprite: 'sprite.svg'
+            dest: './'
+            sprite: 'colored.svg'
             common: 'icons'
             render: less:
               template: 'template/sprite/_symbol.less'
               dest: 'sprite.less'
             example:
               template: 'template/sprite/_symbol.html'
-              dest: 'sprite.colorless.html'
+              dest: 'sprite.colored.html'
         () ->
-          gulp.src paths.svgicons.src_colorless_files
+          gulp.src paths.svgicons.src_colored_files
           .pipe run.plumber(errorHandler: (err) ->
               run.notify.onError('Error: <%= error.message %>') err
               @emit 'end'
               return
             )
-          .pipe run.cheerio
-            run: ($) ->
-              $('[fill]').removeAttr('fill');
-              $('[stroke]').removeAttr('stroke');
-              $('[style]').removeAttr('style');
-              return
-            parserOptions: xmlMode: true
-          # .pipe run.imagemin().pipe gulp.dest paths.svgicons.dist_dir
-          # .pipe run.svgmin([{removeViewBox: true}]).pipe gulp.dest paths.svgicons.dist_dir
-          .pipe run.replace '&gt;', '>'
-          .pipe run.svgSprite(configSvg)
-          .pipe gulp.dest paths.svgicons.dist_colorless_files
+          .pipe run.svgSprite(confColored)
+          .pipe gulp.dest paths.svgicons.dist_colored
           .pipe run.duration('building svg icons')
           .pipe run.notify('Finished: <%= file.relative %>')
-          .pipe run.browserSync.stream()
           .pipe run.connect.reload()
           .on 'end', () ->
-            gulp.src paths.svgicons.dist_colorless_files+'symbol/*.svg'
+            gulp.src paths.svgicons.dist_colored+'*.svg'
             .pipe gulp.dest paths.svgicons.dist_dir
