@@ -5,13 +5,18 @@ This handles modularizing all of our Gulp tasks in a very easy
 and understandable manner. To ease plugin loading, we require 
 'gulp-load-plugins' so dependencies from `package.json` get
 autoloaded. It's just called `run` for expressiveness.
+projects in ./app/: 
+    blagoyArt
+test projects in ./app/: 
+    test/htmlTest
+    test/spriteTest
+
+
 
     gulp = require 'gulp'
     run  = require('gulp-load-plugins')(pattern: '*')
-    appName = 'htmlTest'
+    appName = 'test/spriteTest'
     app = './app/'+appName+'/src/'
-
-
 
     prod = '../barbiture.github.io/'+appName+'/' #app prod and sourse
     dev = './app/'+appName+'/dist/'
@@ -66,6 +71,13 @@ autoloaded. It's just called `run` for expressiveness.
         'images':
             'src_files': app+'assets/img/*.*'
             'dist_dir': app+'images/'
+
+    run.util.log '##### GULP BUILD #####'
+    yellow  = run.util.colors.yellow app
+    blue    = run.util.colors.blue 'starting project at'
+    run.util.log "#{blue}"
+    run.util.log "#{yellow}"
+    run.util.log ''
 
     module.exports = (tasks) ->
       addElem: (paths) ->

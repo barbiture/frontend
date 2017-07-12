@@ -1,12 +1,15 @@
 
     # readline      = require('readline')  
     # console.log readline #todo: https://stackoverflow.com/questions/32902250/how-to-change-node-js-variables-from-terminal
-    fs = require('fs')
+    fs      = require('fs')
     prompt  = require('prompt')
     ncp     = require('ncp').ncp
-    net = require('net')
+    net     = require('net')
 
 
+    distProj = 'app/'
+    distTest = 'app/test/'
+    dist = distTest
 
     appSource = 'template/util/appTemplate/'
     appDest = ''
@@ -29,9 +32,9 @@
       # console.log 'Command-line input received:'
       # console.log ' AppName: ' + result.appName
       
-      fs.mkdirSync 'app/' + result.appName
-      # fs.mkdirSync 'app/' + result.appName + '/src/'
-      appDest = 'app/' + result.appName + '/'
+      fs.mkdirSync dist + result.appName
+      # fs.mkdirSync dist + result.appName + '/src/'
+      appDest = dist + result.appName + '/'
       console.log appDest
       console.log 'app is done!'
       # console.log appDest

@@ -12,9 +12,9 @@ $Path
 
 
     tasks = [
-      '_watch'
       '_html'
       '_less'
+      '_watch'
       '_server'
     ]
 
@@ -38,16 +38,6 @@ default, or as build. It almost can't get any simpler:
       '_server'
     ]
 
-    gulp.task 'proj', [
-      'connect',
-      '_js',
-      '_sass',
-      '_html',
-      '_fonts',
-      '_img',
-      '_spritesvg',
-      '_spritesvgc'
-    ]
     gulp.task 'build', [
       '_html'
       '_less'

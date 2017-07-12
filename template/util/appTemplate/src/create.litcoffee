@@ -27,7 +27,7 @@
       # console.log 'Command-line input received:'
       console.log ' PageName: ' + result.pageName
       filepath = result.pageName+'.html'
-      link = '<a href="'+filepath+'">'+filepath+'</a>'
+      link = '<li><a href="'+filepath+'">'+filepath+'</a></li>'
       fs.writeFile filepath, fileContent, (err) ->
         if err
           throw err
