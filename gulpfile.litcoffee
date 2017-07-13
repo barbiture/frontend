@@ -9,7 +9,24 @@ called 'gulp.litcoffee', located at the project root.
 npm i gulp coffee-script gulp-coffee gulp-load-plugins gulp-connect browser-sync gulp-autoprefixer gulp-duration gulp-imagemin gulp-svg-sprite gulp-svg2png gulp-filter gulp-less gulp-notify gulp-include gulp-concat gulp-uglify --save-dev
 
 $Path
-
+  _coffee ## description
+  _css ##
+  _fonts ##
+  _html ##
+  _img ##
+  _jade ##
+  _js ##
+  _less ##
+  _merge ##
+  _raster ##
+  _sass ##
+  _server ##
+  _spritepng ##
+  _spritesvgc ##
+  _svgColored ##
+  _svgColorless ##
+  _sync ##
+  _watch ##
 
     tasks = [
       '_html'

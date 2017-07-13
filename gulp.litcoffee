@@ -15,12 +15,20 @@ test projects in ./app/:
 
     gulp = require 'gulp'
     run  = require('gulp-load-plugins')(pattern: '*')
-    appName = 'test/spriteTest'
+    appName = 'maxkotkov'
     app = './app/'+appName+'/src/'
 
     prod = '../barbiture.github.io/'+appName+'/' #app prod and sourse
     dev = './app/'+appName+'/dist/'
     base = dev
+    bowerJs = ['']
+    bowerLess = ['']
+    bowerImg = ['']
+    bowerSass = ['']
+    bowerCss = ['']
+
+    # bowerJs = [1,2,3]
+    # console.log bowerJs
     paths =
         'app_root':
             'app_src':              app
@@ -32,13 +40,16 @@ test projects in ./app/:
             'src_files':            app+'assets/styles/**/*.less'
             'watch_files':          app+'components/**/*.less'
             'dist_dir':             base+'styles/'
-        'js': # compile and minfy js
+            'bower':                ''+bowerLess # BOWER LESS
+        'js': # COMPILE AND MINFY JS
             'src_files':            app+'assets/js/*.js'
             'watch_files':          app+'components/**/*.js'
             'dist_dir':             base+'js/'
+            'bower':                ''+bowerJs # BOWER JS
         'img': # compile and minfy img
             'src_files':            app+'assets/img/*.*'
             'dist_dir':             base+'img/'
+            'bower':                ''+bowerImg # BOWER Img
         'fonts':  # compile and minfy fonts
             'src_files':            app+'assets/fonts/*.*'
             'dist_dir':             base+'fonts/'
@@ -48,9 +59,11 @@ test projects in ./app/:
         'sass': # compile and minfy sass
             'src_files':            app+'assets/styles/**/*.scss'
             'dist_dir':             base+'styles/'
+            'bower':                ''+bowerSass # BOWER Img
         'css': # compile and minfy css
             'src_files':            app+'assets/styles/*.css'
             'dist_dir':             base+'styles/'
+            'bower':                ''+bowerCss # BOWER Img
         'coffee': # compile and minfy coffee
             'src_files':            app+'assets/js/*.litcoffee'
             'dist_dir':             base+'js/'

@@ -9,7 +9,7 @@
 
     distProj = 'app/'
     distTest = 'app/test/'
-    dist = distTest
+    dist = distProj
 
     appSource = 'template/util/appTemplate/'
     appDest = ''

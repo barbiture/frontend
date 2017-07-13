@@ -14,12 +14,12 @@
     "test",
     "tests"
   ],
-  "devDependencies": {
-  },
+  "devDependencies": {},
   "dependencies": {
     "slick-carousel": "^1.6.0",
     "svg4everybody": "^2.1.8",
     "fullpage.js": "^2.9.4",
-    "bootstrap": "^3.3.7"
+    "bootstrap": "^3.3.7",
+    "lesshat": "^4.1.0"
   }
 }

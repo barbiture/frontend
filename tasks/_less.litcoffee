@@ -10,6 +10,7 @@ within this single Gulp task.
       () ->
         gulp.src [
           paths.less.src_files
+          paths.less.bower
         ]
         .pipe run.sourcemaps.init()
         .pipe run.plumber(errorHandler: (err) ->
