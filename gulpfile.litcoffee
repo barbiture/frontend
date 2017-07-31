@@ -28,16 +28,29 @@ $Path
   _sync ##
   _watch ##
 
-    tasks = [
+    ts = [
+      '_clean'
       '_html'
       '_less'
+      '_css'
       '_js'
+      '_img'
+      '_fonts'
+      '_files'
       '_watch'
-      '_server'
-      '_raster'
-      '_spritepng'
       '_svgColorless'
+      '_server'
     ]
+    build = [
+      '_html'
+      '_less'
+      '_css'
+      '_js'
+      '_img'
+      '_fonts'
+      '_files'
+    ]
+    tasks = ts
 
 After that, we simply require Gulp from an extra 'gulp.coffee'
 file in the root of our project folder, pass it the `tasks`
@@ -59,22 +72,12 @@ default, or as build. It almost can't get any simpler:
       '_spritepng'
     ]
     gulp.task 'test', [
-      '_svgColorless'
+      '_php'
     ]
     gulp.task 'serve', [
       '_watch'
       '_server'
     ]
 
-    gulp.task 'build', [
-      '_html'
-      '_less'
-      '_js'
-      '_svgColorless'
-      'sprite'
-      '_watch'
-      '_server'
-    ]
-    gulp.task 'default', ['build', '_watch', '_server']
-
-    
+    gulp.task 'build', build
+    gulp.task 'default', ['_clean', 'build', '_watch', '_server']

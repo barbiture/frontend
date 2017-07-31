@@ -14,12 +14,22 @@
     "test",
     "tests"
   ],
-  "devDependencies": {},
+  "devDependencies": {
+    "lesshat": "^4.1.0",
+    "svg4everybody": "^2.1.8"
+  },
   "dependencies": {
-    "slick-carousel": "^1.6.0",
-    "svg4everybody": "^2.1.8",
-    "fullpage.js": "^2.9.4",
-    "bootstrap": "^3.3.7",
-    "lesshat": "^4.1.0"
+    "fancybox": "^3.1.20",
+    "gridly-flexbox": "^1.4.10",
+    "ionsound": "1.3.0",
+    "jquery-form": "jquery-form-plugin#^4.2.1",
+    "jquery-placeholder-newlines": "*",
+    "jQuery.dotdotdot": "dotdotdot#^1.8.3",
+    "jquery.form-styler": "jquery-form-styler#^2.0.0",
+    "jquery.maskedinput": "jquery-maskedinput#^1.4.1",
+    "resetless": "^1.1.2",
+    "smoothscroll-for-websites": "^1.4.6",
+    "swiper": "^3.4.2",
+    "fotorama": "^4.6.4"
   }
 }

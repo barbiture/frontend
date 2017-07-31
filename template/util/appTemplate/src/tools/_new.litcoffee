@@ -8,7 +8,7 @@
     #   return
 
     fileContent = 'include'
-    rootPage =  'components/util/links.html'
+    rootPage =  'components/util/links/links.html'
     properties = [
       {
         name: 'pageName'

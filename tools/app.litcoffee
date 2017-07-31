@@ -4,8 +4,7 @@
     fs      = require('fs')
     prompt  = require('prompt')
     ncp     = require('ncp').ncp
-    net     = require('net')
-
+    # net     = require('net')
 
     distProj = 'app/'
     distTest = 'app/test/'
@@ -35,7 +34,6 @@
       fs.mkdirSync dist + result.appName
       # fs.mkdirSync dist + result.appName + '/src/'
       appDest = dist + result.appName + '/'
-      console.log appDest
       console.log 'app is done!'
       # console.log appDest
       ncp.limit = 16

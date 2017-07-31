@@ -8,10 +8,7 @@ within this single Gulp task.
 
     module.exports = (gulp, run, paths, base) ->
       () ->
-        gulp.src [
-          paths.less.src_files
-          paths.less.bower
-        ]
+        gulp.src paths.less.src_files
         .pipe run.sourcemaps.init()
         .pipe run.plumber(errorHandler: (err) ->
             run.notify.onError('Error: <%= error.message %>') err
@@ -29,7 +26,7 @@ within this single Gulp task.
           cascade: false
         .pipe run.sourcemaps.write('./maps')
         .pipe gulp.dest paths.less.dist_dir
-        .pipe run.notify('Finished: <%= file.relative %>')
+        .pipe run.notify(':)')
         .pipe run.connect.reload()
 
 

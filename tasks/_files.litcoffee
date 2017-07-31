@@ -8,10 +8,10 @@ within this single Gulp task.
 
     module.exports = (gulp, run, paths) ->
       () ->
-        gulp.src paths.css.src_files
-        .pipe gulp.dest paths.css.dist_dir
+        gulp.src paths.files.src_files
+        # .pipe run.file paths.files.src_files
+        .pipe gulp.dest paths.files.dist_dir
         .pipe run.notify('Finished: <%= file.relative %>')
-        .pipe run.connect.reload()
 
 
 
