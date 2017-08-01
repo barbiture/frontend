@@ -30,6 +30,7 @@
     "resetless": "^1.1.2",
     "smoothscroll-for-websites": "^1.4.6",
     "swiper": "^3.4.2",
-    "fotorama": "^4.6.4"
+    "fotorama": "^4.6.4",
+    "air-datepicker": "^2.2.3"
   }
 }

@@ -36,7 +36,6 @@ test projects in ./app/:
               'bower_components/jquery-form/dist/jquery.form.min.js'
               'bower_components/jquery.form-styler/dist/jquery.formstyler.min.js'
               'bower_components/swiper/dist/js/swiper.jquery.min.js'
-              
               # 'bower_components/jQuery.dotdotdot/src/jquery.dotdotdot.min.js'
             ]
     jsWatch = [
