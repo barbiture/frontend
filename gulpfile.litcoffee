@@ -31,7 +31,7 @@ $Path
     ts = [
       '_clean'
       '_html'
-      '_less'
+      '_sass'
       '_css'
       '_js'
       '_img'
@@ -43,7 +43,7 @@ $Path
     ]
     build = [
       '_html'
-      '_less'
+      '_sass'
       '_css'
       '_js'
       '_img'

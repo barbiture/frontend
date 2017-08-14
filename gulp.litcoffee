@@ -8,6 +8,7 @@ autoloaded. It's just called `run` for expressiveness.
 projects in ./app/:
     blagoyArt
     maxkotkov
+    lublu-no_Roma
 test projects in ./app/:
     test/htmlTest
     test/spriteTest
@@ -16,50 +17,22 @@ test projects in ./app/:
 
     gulp = require 'gulp'
     run  = require('gulp-load-plugins')(pattern: '*')
-    appName = 'maxkotkov'
+    appName = 'lublu-no_Roma'
     app = './app/'+appName+'/src/'
 
     prod = '../barbiture.github.io/'+appName+'/' #app prod and sourse
     dev = './app/'+appName+'/dist/'
     base = prod
-    jsSrc = [
-              app+'assets/js/*.js'
-              'bower_components/jquery/dist/jquery.min.js'
-              'bower_components/smoothscroll-for-websites/SmoothScroll.js'
-              'bower_components/fotorama/fotorama.js'
-              'bower_components/ionsound/js/ion.sound.min.js'
-              'bower_components/jQuery.dotdotdot/src/jquery.dotdotdot.min.js'
-              'bower_components/fancybox/dist/jquery.fancybox.min.js'
-              'bower_components/jquery.maskedinput/dist/jquery.maskedinput.min.js'
-              'bower_components/jquery-placeholder-newlines/jquery.placeholder.min.js'
-              'bower_components/jquery.form-styler/dist/jquery.formstyler.min.js'
-              'bower_components/jquery-form/dist/jquery.form.min.js'
-              'bower_components/jquery.form-styler/dist/jquery.formstyler.min.js'
-              'bower_components/swiper/dist/js/swiper.jquery.min.js'
-              # 'bower_components/jQuery.dotdotdot/src/jquery.dotdotdot.min.js'
-            ]
-    jsWatch = [
-        app+'assets/js/*.js'
-        app+'components/**/*.js'
-    ]
-    lessSrc = [
-                app+'assets/styles/*.less'
-    ]
+    jsSrc = [ app+'assets/js/*.js' ]
+    jsWatch = [ app+'assets/js/*.js', app+'components/**/*.js' ]
+    lessSrc = [ app+'assets/styles/*.less' ]
     bowerImg = ['']
     bowerSass = ['']
-    imgSrc = [
-                    app+'assets/img/**/*.*'
-                    'bower_components/fotorama/fotorama.png'
-                    'bower_components/fotorama/fotorama@2x.png'
-            ]
-    cssSrc = [
-                    app+'assets/styles/*.css'
-                    'bower_components/gridly-flexbox/dist/gridly.min.css'
-                    'bower_components/fotorama/fotorama.css'
-                    'bower_components/jquery.form-styler/dist/jquery.formstyler.css'
-                ]
+    imgSrc = [ app+'assets/img/**/*.*' ]
+    cssSrc = [ app+'assets/styles/*.css' ]
 
     watchLess = [app+'components/**/*.less', app+'assets/styles/**/*.less', app+'assets/styles/*.less']
+    # watchSass = [app+'components/**/*.scss', app+'assets/styles/**/*.scss', app+'assets/styles/*.scss']
     # bowerJs = [1,2,3]
     # console.log bowerJs
     paths =

@@ -16,7 +16,7 @@
     properties = [
       {
         name: 'appName'
-        validator: /^[a-zA-Z\s\-]+$/
+        # validator: /^[a-zA-Z\s\-]+$/
         warning: 'App name must be only letters, spaces, or dashes'
       }
     ]
