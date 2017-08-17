@@ -39,6 +39,7 @@ $Path
       '_files'
       '_watch'
       '_svgColorless'
+      '_svgColored'
       '_server'
     ]
     build = [

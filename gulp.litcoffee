@@ -23,16 +23,29 @@ test projects in ./app/:
     prod = '../barbiture.github.io/'+appName+'/' #app prod and sourse
     dev = './app/'+appName+'/dist/'
     base = prod
-    jsSrc = [ app+'assets/js/*.js' ]
+
+todo: make js bower / css bower / sass bower 
+
+    jsSrc = [
+                app+'assets/js/*.js'
+                app+'bower_components/jquery-ui-datepicker-only/jquery-ui.min.js'
+                app+'bower_components/slick-carousel/slick/slick.min.js'
+                app+'bower_components/jquery.form-styler/dist/jquery.formstyler.min.js'
+                ]
     jsWatch = [ app+'assets/js/*.js', app+'components/**/*.js' ]
     lessSrc = [ app+'assets/styles/*.less' ]
+    sassSrc = [ app+'assets/styles/*.scss' ]
     bowerImg = ['']
     bowerSass = ['']
     imgSrc = [ app+'assets/img/**/*.*' ]
-    cssSrc = [ app+'assets/styles/*.css' ]
+    cssSrc = [  app+'assets/styles/*.css'
+                app+'bower_components/jquery-ui-datepicker-only/jquery-ui.css'
+                app+'bower_components/slick-carousel/slick/slick.css'
+                app+'bower_components/jquery.form-styler/dist/jquery.formstyler.css'
+            ]
 
     watchLess = [app+'components/**/*.less', app+'assets/styles/**/*.less', app+'assets/styles/*.less']
-    # watchSass = [app+'components/**/*.scss', app+'assets/styles/**/*.scss', app+'assets/styles/*.scss']
+    watchSass = [app+'components/**/*.scss', app+'assets/styles/**/*.scss', app+'assets/styles/*.scss']
     # bowerJs = [1,2,3]
     # console.log bowerJs
     paths =
@@ -53,10 +66,10 @@ test projects in ./app/:
             'watch_files':          watchLess
             'dist_dir':             base+'styles/'
         'sass': # compile and minfy sass
-            'src_files':            app+'assets/styles/**/*.scss'
-            'watch_files':          app+'components/**/*.scss'
-            'dist_dir':             base+'styles/'
-            'bower':                bowerSass # BOWER Img
+            'src_files':            sassSrc
+            'watch_files':          watchSass
+            'dist_dir':             base+'css/'
+            'bower':                bowerSass # BOWER Sass
         'js': # COMPILE AND MINFY JS
             'src_files':            jsSrc #app+'assets/js/*.js'
             'watch_files':          jsWatch
@@ -73,7 +86,7 @@ test projects in ./app/:
             'dist_dir':             base+''
         'css': # compile and minfy css
             'src_files':            cssSrc
-            'dist_dir':             base+'styles/'
+            'dist_dir':             base+'css/'
         'coffee': # compile and minfy coffee
             'src_files':            app+'assets/js/*.litcoffee'
             'dist_dir':             base+'js/'

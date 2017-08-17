@@ -19,9 +19,9 @@ svg files is handled within this single Gulp task.
             dest: './'
             sprite: 'colored.svg'
             common: 'icons'
-            render: less:
-              template: 'template/sprite/_symbol.less'
-              dest: 'sprite.less'
+            render: scss:
+              template: 'template/sprite/_symbol.scss'
+              dest: 'sprite.scss'
             example:
               template: 'template/sprite/_symbol.html'
               dest: 'sprite.colored.html'
