@@ -50,6 +50,7 @@ $Path
       '_img'
       '_fonts'
       '_files'
+      '_bJs'
     ]
     tasks = ts
 

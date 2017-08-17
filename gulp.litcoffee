@@ -24,14 +24,48 @@ test projects in ./app/:
     dev = './app/'+appName+'/dist/'
     base = prod
 
-todo: make js bower / css bower / sass bower 
+!todo: make js bower / css bower / sass bower 
 
-    jsSrc = [
-                app+'assets/js/*.js'
-                app+'bower_components/jquery-ui-datepicker-only/jquery-ui.min.js'
-                app+'bower_components/slick-carousel/slick/slick.min.js'
-                app+'bower_components/jquery.form-styler/dist/jquery.formstyler.min.js'
-                ]
+    bJsSrc = [
+            #'bower_components/jquery/dist/jquery.min.js'
+        # -> FANCYBOX
+        # TODO: ADD TO ./COMPONENTS FANCY QUICK START
+            'bower_components/bower_components/fancybox/dist/jquery.fancybox.min.js'
+
+        # -> JQUERY UI "DATE PICKER" "RANGE SLIDER"
+        # !TODO: CLEAN CORE.JS / EFFECT.JS
+            'bower_components/jquery-ui/ui/core.js'
+            'bower_components/jquery-ui/ui/effect.js'
+
+            'bower_components/jquery-ui/ui/widgets/datepicker.js'
+            'bower_components/jquery-ui/ui/widgets/mouse.js'
+            'bower_components/jquery-ui/ui/widgets/slider.js'
+        # -> END JQUERY UI "DATE PICKER" "RANGE SLIDER"
+
+        # -> STAR RATING PLUG
+            'bower_components/jquery-star-rating/jquery.form.js'
+        # !TODO: TEST STAR RATING PLUG
+
+        # -> JQUERY.FORM-STYLER
+            'bower_components/jquery.form-styler/dist/jquery.formstyler.min.js'
+
+        # -> CUSTOM-SCROLLBAR
+            'bower_components/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js'
+        # !TODO: TEST
+
+        # -> OWL.CAROUSEL
+            'bower_components/owl.carousel/dist/owl.carousel.min.js'
+            'bower_components/slick-carousel/slick/slick.min.js'
+            'bower_components/wow/dist/wow.min.js'
+
+
+        # -> JQUERY.INPUTMASK
+            'bower_components/inputmask/dist/min/jquery.inputmask.bundle.min.js'
+        # !TODO: TEST ./COMPONENTS/COMPONENTS/INPUTMASK/_ONFOCUS.JS
+                    # ./components/components/inputmask/_onHover.js
+
+    ]
+    jsSrc = [app+'assets/js/custom.js']
     jsWatch = [ app+'assets/js/*.js', app+'components/**/*.js' ]
     lessSrc = [ app+'assets/styles/*.less' ]
     sassSrc = [ app+'assets/styles/*.scss' ]
@@ -71,9 +105,12 @@ todo: make js bower / css bower / sass bower
             'dist_dir':             base+'css/'
             'bower':                bowerSass # BOWER Sass
         'js': # COMPILE AND MINFY JS
-            'src_files':            jsSrc #app+'assets/js/*.js'
+            'src_files':            jsSrc #app+'assets/js/custom.js'
             'watch_files':          jsWatch
             'dist_dir':             base+'js/'
+        'bJs': # COMPILE AND MINFY JS
+            'src_files':            bJsSrc
+            'dist_dir':             base+'js/componetns'
         'img': # compile and minfy img
             'src_files':            imgSrc
             'dist_dir':             base+'img/'
