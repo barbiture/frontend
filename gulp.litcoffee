@@ -17,55 +17,74 @@ test projects in ./app/:
 
     gulp = require 'gulp'
     run  = require('gulp-load-plugins')(pattern: '*')
-    appName = 'lublu-no_Roma'
+    appName = 'deltaplan'
     app = './app/'+appName+'/src/'
 
     prod = '../barbiture.github.io/'+appName+'/' #app prod and sourse
     dev = './app/'+appName+'/dist/'
-    base = prod
+    base = dev
 
 !todo: make js bower / css bower / sass bower 
-
+    
+    bsassSrc = [
+        # 'bower_components/bootstrap/scss/bootstrap-grid.scss'
+    ]
     bJsSrc = [
             #'bower_components/jquery/dist/jquery.min.js'
         # -> FANCYBOX
         # TODO: ADD TO ./COMPONENTS FANCY QUICK START
-            'bower_components/bower_components/fancybox/dist/jquery.fancybox.min.js'
+            # 'bower_components/bower_components/fancybox/dist/jquery.fancybox.min.js'
 
         # -> JQUERY UI "DATE PICKER" "RANGE SLIDER"
         # !TODO: CLEAN CORE.JS / EFFECT.JS
-            'bower_components/jquery-ui/ui/core.js'
-            'bower_components/jquery-ui/ui/effect.js'
+            # 'bower_components/jquery-ui/ui/core.js'
+            # 'bower_components/jquery-ui/ui/effect.js'
 
-            'bower_components/jquery-ui/ui/widgets/datepicker.js'
-            'bower_components/jquery-ui/ui/widgets/mouse.js'
-            'bower_components/jquery-ui/ui/widgets/slider.js'
+            # 'bower_components/jquery-ui/ui/widgets/datepicker.js'
+            # 'bower_components/jquery-ui/ui/widgets/mouse.js'
+            # 'bower_components/jquery-ui/ui/widgets/slider.js'
         # -> END JQUERY UI "DATE PICKER" "RANGE SLIDER"
 
         # -> STAR RATING PLUG
-            'bower_components/jquery-star-rating/jquery.form.js'
+            # 'bower_components/jquery-star-rating/jquery.form.js'
         # !TODO: TEST STAR RATING PLUG
 
         # -> JQUERY.FORM-STYLER
-            'bower_components/jquery.form-styler/dist/jquery.formstyler.min.js'
+            # 'bower_components/jquery.form-styler/dist/jquery.formstyler.min.js'
 
         # -> CUSTOM-SCROLLBAR
-            'bower_components/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js'
+            # 'bower_components/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js'
         # !TODO: TEST
 
         # -> OWL.CAROUSEL
             'bower_components/owl.carousel/dist/owl.carousel.min.js'
-            'bower_components/slick-carousel/slick/slick.min.js'
-            'bower_components/wow/dist/wow.min.js'
+            # 'bower_components/slick-carousel/slick/slick.min.js'
+            # 'bower_components/wow/dist/wow.min.js'
 
 
         # -> JQUERY.INPUTMASK
-            'bower_components/inputmask/dist/min/jquery.inputmask.bundle.min.js'
+            # 'bower_components/inputmask/dist/min/jquery.inputmask.bundle.min.js'
         # !TODO: TEST ./COMPONENTS/COMPONENTS/INPUTMASK/_ONFOCUS.JS
                     # ./components/components/inputmask/_onHover.js
+    ]
+    bCssSrc = [
+
+            'bower_components/owl.carousel/dist/assets/owl.carousel.min.css'
+        # !TODO: Разобраться куда ложить и где менять иконку loader используемых плалгинов
+        # 'bower_components/owl.carousel/dist/assets/ajax-loader.gif'
+
+        # -> BOOTSTRAP 4
+            'bower_components/bootstrap/dist/css/bootstrap-grid.min.css'
+        # -> FONT-AWSEOME
+            'bower_components/font-awesome/css/font-awesome.min.css'
 
     ]
-    jsSrc = [app+'assets/js/custom.js']
+    bFntSrc = [
+        # -> FONT-AWSEOME
+            'bower_components/font-awesome/fonts/*.*'
+
+    ]
+    jsSrc = [app+'assets/js/*.js']
     jsWatch = [ app+'assets/js/*.js', app+'components/**/*.js' ]
     lessSrc = [ app+'assets/styles/*.less' ]
     sassSrc = [ app+'assets/styles/*.scss' ]
@@ -124,6 +143,12 @@ test projects in ./app/:
         'css': # compile and minfy css
             'src_files':            cssSrc
             'dist_dir':             base+'css/'
+        'bCss': # compile and minfy css
+            'src_files':            bCssSrc
+            'dist_dir':             base+'css/'
+        'bFnt': # compile and minfy css
+            'src_files':            bFntSrc
+            'dist_dir':             base+'fonts/'
         'coffee': # compile and minfy coffee
             'src_files':            app+'assets/js/*.litcoffee'
             'dist_dir':             base+'js/'
@@ -145,8 +170,8 @@ test projects in ./app/:
             'dist_styles':          app+'assets/sprites/png/src/'
             'dist_dir':             base+'sprites/'
         'files': # compile and minfy css
-            'src_files':            app+'assets/sounds/*.*'
-            'dist_dir':             base+'sounds/'
+            'src_files':            app+'assets/styles/**/*.*'
+            'dist_dir':             base+'sass/'
 
     run.util.log '##### GULP BUILD #####'
     yellow  = run.util.colors.yellow app

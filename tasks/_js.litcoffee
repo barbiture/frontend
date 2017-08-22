@@ -15,7 +15,7 @@ JavaScript files is handled within this single Gulp task.
             @emit 'end'
             return
           )
-        .pipe run.uglify()
+        # .pipe run.uglify()
         .pipe run.sourcemaps.write('./maps')
         .pipe gulp.dest paths.js.dist_dir
         .pipe run.duration('building js')

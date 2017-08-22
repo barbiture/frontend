@@ -10,12 +10,46 @@
   <link rel="icon" type="image/x-icon" href="favicon.ico" />
   <link rel="stylesheet" type="text/css" href="css/style.css" />
 </head>
-<body class="loaded"></body>
-<!--= include components/header/_header.html -->
-<div class="root">
-  <ul class="root-wrap">
-    <!--= include components/util/links/links.html -->
-  </ul>
-</div>
 
-<!--= include components/footer/_footer.html -->
+<!-- BEGIN BODY -->
+
+<body class="loaded">
+
+  <div class="root">
+    <ul class="root-wrap">
+      <!--= include components/util/links/links.html -->
+    </ul>
+  </div>
+
+  <div class="main-wrapper">
+
+  <!-- BEGIN CONTENT -->
+    <!--= include components/main/_main.html -->
+  <!-- CONTENT EOF   -->
+
+  <!-- BEGIN HEADER -->
+    <!--= include components/header/_header.html -->
+  <!-- HEADER EOF   -->
+
+  <!-- BEGIN FOOTER -->
+    <!--= include components/footer/_footer.html -->
+  <!-- FOOTER EOF   -->
+
+  </div>
+
+
+  <div class="icon-load"></div>
+
+  <!-- BODY EOF   -->
+
+  <script type="text/javascript" src="js/jquery-3.0.0.min.js"></script>
+  <script type="text/javascript" src="js/jquery-migrate-1.4.1.min.js" ></script>
+
+  <!-- <script type="text/javascript" src="js/components/jquery.fancybox.js" ></script> -->
+  <!-- <script type="text/javascript" src="js/components/jquery.formstyler.js" ></script> -->
+  <!-- <script type="text/javascript" src="js/components/slick.js" ></script> -->
+  <!-- <script type="text/javascript" src="js/components/jquery.mCustomScrollbar.js" ></script> -->
+
+  <script type="text/javascript" src="js/custom.js" ></script>
+</body>
+</html>

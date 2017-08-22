@@ -16,6 +16,7 @@ $Path
   _img ##
   _jade ##
   _js ##
+  _jsbowerJ##
   _less ##
   _merge ##
   _raster ##
@@ -34,6 +35,9 @@ $Path
       '_sass'
       '_css'
       '_js'
+      '_bowerJs'
+      '_bowerCss'
+      '_bowerFnt'
       '_img'
       '_fonts'
       '_files'
@@ -47,10 +51,17 @@ $Path
       '_sass'
       '_css'
       '_js'
+      '_bowerJs'
+      '_bowerCss'
+      '_bowerFnt'
       '_img'
       '_fonts'
       '_files'
-      '_bJs'
+    ]
+    bower = [
+      '_bowerJs'
+      '_bowerCss'
+      '_bowerFnt'
     ]
     tasks = ts
 
@@ -68,14 +79,12 @@ array and let Node's export feature handle the rest:
 Since we've modularized everything before in the above section,
 we can now easily pass whatever tasks we want Gulp to run as
 default, or as build. It almost can't get any simpler:
-    
+
     gulp.task 'sprite', [
       '_raster'
       '_spritepng'
     ]
-    gulp.task 'test', [
-      '_php'
-    ]
+    gulp.task 'bower', bower
     gulp.task 'serve', [
       '_watch'
       '_server'
