@@ -20,7 +20,7 @@ within this single Gulp task.
           compress: true
         .pipe run.autoprefixer
           browsers: [
-            'last 2 versions'
+            'last 4 versions'
             'ie 9'
           ]
           cascade: false

@@ -17,10 +17,11 @@
   "devDependencies": {
     "lesshat": "^4.1.0",
     "svg4everybody": "^2.1.8",
-    "owl.carousel": "OwlCarousel2#^2.2.1"
+    "owl.carousel": "OwlCarousel2#^2.2.1",
+    "bootstrap": "3.3.2"
   },
   "dependencies": {
-    "fancybox": "^3.1.20",
+    "fancybox": "2",
     "jquery-form": "jquery-form-plugin#^4.2.1",
     "jquery.form-styler": "jquery-form-styler#^2.0.0",
     "smoothscroll-for-websites": "^1.4.6",
@@ -31,6 +32,12 @@
     "wow": "wowjs#^1.1.2",
     "inputmask": "jquery.inputmask#^3.3.7",
     "bootstrap": "v4.0.0-beta",
-    "font-awesome": "fontawesome#^4.7.0"
+    "font-awesome": "fontawesome#^4.7.0",
+    "popper.js": "^1.12.3",
+    "isotope": "^3.0.4",
+    "bootstrap-multiselect": "^0.9.13",
+    "jquery-validation": "^1.17.0",
+    "jquery.countdown": "^2.2.0",
+    "flipclock": "FlipClock#^0.7.7"
   }
 }

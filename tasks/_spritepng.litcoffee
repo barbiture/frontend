@@ -9,10 +9,10 @@ JavaScript files is handled within this single Gulp task.
         spriteData = gulp.src paths.pngicons.src_files
         .pipe run.spritesmith
           imgName: 'sprite.png'
-          cssName: 'sprite.less'
-          cssFormat: 'less'
+          cssName: '_sprite.scss'
+          cssFormat: 'scss'
           algorithm: 'binary-tree'
-          cssTemplate: 'template/sprite/less.template.mustache'
+          cssTemplate: 'node_modules/spritesheet-templates/lib/templates/scss.template.handlebars'
           imgPath: '../sprites/sprite.png'
           cssVarMap: (sprite) ->
             sprite.name = 's-' + sprite.name

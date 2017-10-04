@@ -17,23 +17,49 @@ test projects in ./app/:
 
     gulp = require 'gulp'
     run  = require('gulp-load-plugins')(pattern: '*')
-    appName = 'deltaplan'
+    appName = 'tradersUa'
     app = './app/'+appName+'/src/'
 
     prod = '../barbiture.github.io/'+appName+'/' #app prod and sourse
     dev = './app/'+appName+'/dist/'
-    base = dev
+    base = prod
 
 !todo: make js bower / css bower / sass bower 
-    
-    bsassSrc = [
-        # 'bower_components/bootstrap/scss/bootstrap-grid.scss'
-    ]
+
     bJsSrc = [
-            #'bower_components/jquery/dist/jquery.min.js'
+        # -> SLICK SLIDER
+            app+'bower_components/vanilla-masker/build/vanilla-masker.min.js'
+    ]
+        # -> SLICK SLIDER
+            # 'bower_components/slick-carousel/slick/slick.min.js'
+        # -> ISOTOPE
+            # 'bower_components/isotope/dist/isotope.pkgd.min.js'
         # -> FANCYBOX
         # TODO: ADD TO ./COMPONENTS FANCY QUICK START
-            # 'bower_components/bower_components/fancybox/dist/jquery.fancybox.min.js'
+            # 'bower_components/fancybox/source/jquery.fancybox.js'
+        # -> JQUERY.FORM-STYLER
+            # 'bower_components/jquery.form-styler/dist/jquery.formstyler.min.js'
+        # JQUERY-VALIDATION
+            # 'bower_components/jquery-validation/dist/jquery.validate.min.js'
+            # 'bower_components/jquery-validation/dist/additional-methods.min.js'
+        # -> CUSTOM-SCROLLBAR
+            # 'bower_components/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js'
+            # bootstrap-multiselect.js
+        # -> MULTISELECT
+            # 'bower_components/bootstrap/dist/js/bootstrap.min.js'
+            # 'bower_components/bootstrap-multiselect/dist/js/bootstrap-multiselect.js'
+        # -> COUNTDOWN
+            # 'bower_components/jquery.countdown/dist/jquery.countdown.min.js'
+        # -> FLIPCLOCK
+            # 'bower_components/flipclock/compiled/flipclock.min.js'
+
+        
+        # -> MASONRY
+        # 'bower_components/masonry/dist/masonry.pkgd.min.js'
+        
+        # -> FANCYBOX
+        # TODO: ADD TO ./COMPONENTS FANCY QUICK START
+            # 'bower_components/fancybox/source/jquery.fancybox.js'
 
         # -> JQUERY UI "DATE PICKER" "RANGE SLIDER"
         # !TODO: CLEAN CORE.JS / EFFECT.JS
@@ -57,8 +83,11 @@ test projects in ./app/:
         # !TODO: TEST
 
         # -> OWL.CAROUSEL
-            'bower_components/owl.carousel/dist/owl.carousel.min.js'
-            # 'bower_components/slick-carousel/slick/slick.min.js'
+            # 'bower_components/owl.carousel/dist/owl.carousel.min.js'
+        # -> GET BOOTSTRAP 4
+            # 'bower_components/bootstrap/dist/js/bootstrap.min.js'
+            # app+'assets/js/components/popper.min.js'
+        # -> WOWJS
             # 'bower_components/wow/dist/wow.min.js'
 
 
@@ -66,37 +95,53 @@ test projects in ./app/:
             # 'bower_components/inputmask/dist/min/jquery.inputmask.bundle.min.js'
         # !TODO: TEST ./COMPONENTS/COMPONENTS/INPUTMASK/_ONFOCUS.JS
                     # ./components/components/inputmask/_onHover.js
-    ]
-    bCssSrc = [
-
-            'bower_components/owl.carousel/dist/assets/owl.carousel.min.css'
+    
+    bCssSrc = []
+        # -> SLICK SLIDER
+            # app+'bower_components/slick-carousel/slick/slick.css'
+        # -> FLIPCLOCK
+            # 'bower_components/flipclock/compiled/flipclock.css'
+        
+            # 'bower_components/owl.carousel/dist/assets/owl.carousel.min.css'
+            # 'bower_components/fancybox/source/jquery.fancybox.css'
         # !TODO: Разобраться куда ложить и где менять иконку loader используемых плалгинов
         # 'bower_components/owl.carousel/dist/assets/ajax-loader.gif'
 
         # -> BOOTSTRAP 4
-            'bower_components/bootstrap/dist/css/bootstrap-grid.min.css'
-        # -> FONT-AWSEOME
-            'bower_components/font-awesome/css/font-awesome.min.css'
+            # 'bower_components/bootstrap/dist/css/bootstrap-grid.min.css'
 
-    ]
-    bFntSrc = [
         # -> FONT-AWSEOME
-            'bower_components/font-awesome/fonts/*.*'
+            # 'bower_components/font-awesome/css/font-awesome.min.css'
 
-    ]
+    
+    bFntSrc = []
+        # -> FONT-AWSEOME
+            # 'bower_components/font-awesome/fonts/*.*'
+    bowerImg = ['']
+    bowerSass = ['']
+   
+            
+    cssSrc = ['']
+                # app+'assets/styles/css/*.css'
+                # app+'bower_components/jquery-ui-datepicker-only/jquery-ui.css'
+                
+                    # app+'bower_components/jquery.form-styler/dist/jquery.formstyler.css'
+
     jsSrc = [app+'assets/js/*.js']
     jsWatch = [ app+'assets/js/*.js', app+'components/**/*.js' ]
     lessSrc = [ app+'assets/styles/*.less' ]
-    sassSrc = [ app+'assets/styles/*.scss' ]
-    bowerImg = ['']
-    bowerSass = ['']
-    imgSrc = [ app+'assets/img/**/*.*' ]
-    cssSrc = [  app+'assets/styles/*.css'
-                app+'bower_components/jquery-ui-datepicker-only/jquery-ui.css'
-                app+'bower_components/slick-carousel/slick/slick.css'
-                app+'bower_components/jquery.form-styler/dist/jquery.formstyler.css'
-            ]
-
+    sassSrc = [ app+'assets/styles/*.scss'
+                app+'assets/styles/bootstrap/bootstrap.scss'
+              ]
+    imgSrc = [ app+'assets/img/**/*.*']
+                # 'bower_components/fancybox/source/fancybox_sprite.png'
+                # 'bower_components/fancybox/source/fancybox_sprite@2x.png'
+                # 'bower_components/fancybox/source/fancybox_loading@2x.gif'
+                # 'bower_components/fancybox/source/fancybox_loading.gif'
+                # 'bower_components/fancybox/source/fancybox_overlay.png'
+                # 'bower_components/fancybox/source/blank.gif'
+                
+                
     watchLess = [app+'components/**/*.less', app+'assets/styles/**/*.less', app+'assets/styles/*.less']
     watchSass = [app+'components/**/*.scss', app+'assets/styles/**/*.scss', app+'assets/styles/*.scss']
     # bowerJs = [1,2,3]
@@ -108,6 +153,9 @@ test projects in ./app/:
             'base_img':             base+'img/'
             'base_fonts':           base+'fonts/'
             'base_audio':           base+'audio/'
+        # 'buildSrc':
+        #     'app_src':              app+'dist/'
+        #     'dist_dir':             '/Volumes/31.31.196.137/'+app
         'app_root':
             'app_src':              app
         'html': # compile and minfy html
@@ -129,7 +177,7 @@ test projects in ./app/:
             'dist_dir':             base+'js/'
         'bJs': # COMPILE AND MINFY JS
             'src_files':            bJsSrc
-            'dist_dir':             base+'js/componetns'
+            'dist_dir':             base+'js/components'
         'img': # compile and minfy img
             'src_files':            imgSrc
             'dist_dir':             base+'img/'
@@ -166,8 +214,8 @@ test projects in ./app/:
             'src_files':            app+'assets/sprites/colorless/src/*.svg'
             'dist_dir':             app+'assets/sprites/png/dist'
         'pngicons': ## png sprite
-            'src_files':            app+'assets/sprites/png/dist/*.png'
-            'dist_styles':          app+'assets/sprites/png/src/'
+            'src_files':            app+'assets/sprites/*.png'
+            'dist_styles':          app+'assets/styles/utils/'
             'dist_dir':             base+'sprites/'
         'files': # compile and minfy css
             'src_files':            app+'assets/styles/**/*.*'

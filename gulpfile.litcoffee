@@ -45,6 +45,9 @@ $Path
       '_svgColorless'
       '_svgColored'
       '_server'
+      '_spritepng'
+      '_build'
+      '_mainBowerFiles'
     ]
     build = [
       '_html'
@@ -57,6 +60,7 @@ $Path
       '_img'
       '_fonts'
       '_files'
+      '_spritepng'
     ]
     bower = [
       '_bowerJs'
